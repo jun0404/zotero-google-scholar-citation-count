@@ -95,6 +95,8 @@ $__gscc.util = {
     return new Promise((resolve) => {
       const xhr = new XMLHttpRequest();
       xhr.open(opts.method, opts.url);
+      xhr.setRequestHeader("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36");
+      xhr.setRequestHeader("referer", "https://www.google.com/");
       xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
           resolve(xhr);
